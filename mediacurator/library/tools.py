@@ -30,13 +30,14 @@ def load_arguments():
 
     for arg in sys.argv:
         # Confirm with the user that he selected to delete found files
-        if "-del" in arg:
-            print(
-                f"{colorama.Fore.YELLOW}WARNING: Delete option selected!{colorama.Fore.RESET}")
-            if not user_confirm(f"Are you sure you wish to delete all found results after selected operations are succesfull ? [Y/N] ?", color="yellow"):
-                print(f"{colorama.Fore.GREEN}Exiting!{colorama.Fore.RESET}")
-                exit()
-        elif "-in:" in arg:
+        #if "-del" in arg:
+        #   print(
+        #        f"{colorama.Fore.YELLOW}WARNING: Delete option selected!{colorama.Fore.RESET}")
+        #   if not user_confirm(f"Are you sure you wish to delete all found results after selected operations are succesfull ? [Y/N] ?", color="yellow"):
+        #        print(f"{colorama.Fore.GREEN}Exiting!{colorama.Fore.RESET}")
+        #        exit()
+        # elif "-in:" in arg:
+        if "-in:" in arg:    
             arguments["inputs"] += arg[4:].split(",")
         elif "-filters:" in arg:
             arguments["filters"] += arg[9:].split(",")
